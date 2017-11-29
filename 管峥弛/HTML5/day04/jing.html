@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>京东</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .t{
+        width: 1190px;
+        margin: 0px auto;
+      }
+      li{
+        list-style: none;
+      }
+      a{
+        list-style: none;
+        text-decoration: none;
+      }
+      a:link{
+        color: black;
+      }
+      a:visited{
+        color:black;
+      }
+      a:hover{
+        color: green;
+      }
+      .head{
+        height: 80px;
+        background-color:#190400;
+      }
+      .guanggao{
+        height: 80px;
+        background-image: url("./jingdong/dong1.jpg");
+      }
+      .shortcut{
+        height: 25px;
+        background-color: #e3e4e5;
+      }
+      .shortcut_1{
+        float: right;
+        width: 800px;
+        height: 30px;
+      }
+      .shortcut_1 li a{
+        float: left;
+        margin-left: 11px;
+        border-right: 1px  black solid;
+      }
+      .shortcut_2{
+        background-color: red;
+        margin-left: 250px;
+      }
+      .neck .t{
+        height: 130px;
+        position: relative;
+        padding-top:6px;
+      }
+      .logo{
+        float: left;
+        width: 190px;
+        height: 170px;
+        background-image: url("./jingdong/logo.png");
+        border: 1px solid white;
+        background-color: white;
+        margin-top: -30px;
+      }
+      .taobao{
+        float: right;
+        width: 115px;
+        height: 113px;
+        margin-top: -6px;
+      }
+      .sousuo{
+        width: 430px;
+        height: 34px;
+        margin: 5px 299px;
+        border: red 2px solid;
+        background-color: white;
+
+      }
+      .sousuo_1{
+        float: right;
+        width: 54px;
+        height: 34px;
+      }
+      .sousuo_2{
+        float: right;
+        width:19px;
+        height:15px;
+        margin: 10px 22px;
+        background: url("./jingdong/xiangji.png") -140px 80px;
+      }
+      .che{
+        float: right;
+        width: 189px;
+        height: 32px;
+        margin: -37px 68px;
+        border: black 1px solid;
+        background-color: white;
+      }
+      .che .che_1{
+        float: right;
+        margin:  5px 25px;
+      }
+      .che .che_2{
+        float: left;
+        margin-top: 2px;
+      }
+      .sousuo_3{
+        float: left;
+        width: 700px;
+        height: 20px;
+        margin: -4px 40px;
+      }
+      .sousuo_3 ul li{
+        float: left;
+      }
+      .sousuo_4{
+        float: left;
+        width: 800px;
+        height: 37px;
+        margin: 31px 2px;
+      }
+      .sousuo_4 ul li a{
+        float: left;
+        margin-top: 0px;
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+      .fupin{
+        width: 190px;
+        height: 40px;
+        position: relative;
+        top:-15px;
+        left:818px;
+      }
+      .foot .t{
+        height: 492px;
+        position: relative;
+        padding-top:6px;
+        /*background-color: green;*/
+      }
+      .foot_zuo{
+        width:190px;
+        height:492px;
+        margin-top: -6px;
+        background-color: #666;
+
+      }
+      .foot_zuo ul li a{
+        color: rgb(210,210,210);
+      }
+      .foot_zhong{
+        width: 790px;
+        height: 340px;
+        position: inherit;
+        top:-491px;
+        right: -201px;
+      }
+      .foot_zhong1{
+        position: relative;
+        top:-473px;
+        left:201px;
+      }
+      .foot_zhong2{
+        position: relative;
+        left: 5px;
+      }
+      .foot_you{
+        width: 199px;
+        height: 474px;
+        position: relative;
+        top: -949px;
+        left: 1000px;
+        /*background-color: green;*/
+      }
+      .foot_you1{
+        background-position: -70px 0;
+        background-size: 156px 123px;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 50px;
+        margin: 5px 10px;
+      }
+      .foot_you2{
+        position: relative;
+        top:-52px;
+        left: 65px;
+      }
+      .foot_you3{
+        position: relative;
+        top: -51px;
+        left: 76px;
+      }
+      .foot_you4{
+        width: 74px;
+        height: 23px;
+        border: 2px red solid;
+        margin-left: 19px;
+        position: inherit;
+        top: -42px;
+        left: -8px;
+      }
+      .foot_you5{
+        width: 74px;
+        height: 23px;
+        border: 2px red solid;
+        margin-left: 19px;
+        position: inherit;
+        top: -42px;
+        left: -8px;
+      }
+      .foot_you6{
+        width: 176px;
+        height: 151px;
+        border: 1px solid #e3e4e5;
+        margin: -33px 8px;
+      }
+      .foot_you6 p{
+        font-size: small;
+      }
+      .foot_you7{
+        width: 230px;
+        height: 208px;
+        margin: 38px -9px;
+      }
+      .foot_you71{
+        float: left;
+        width: 52px;
+        height: 71px;
+        border-top: 1px solid #e7e7e7;
+        border-left: 1px solid #e7e7e7;
+      }
+      .one {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+
+        background: url("./images/sprite.png") 155px -89px;
+      }
+      .one1{
+        position: relative;
+        top: -9px;
+        left: 10px;
+      }
+      .two {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+
+        background: url("./images/sprite.png") 312px -45px;
+      }
+      .two1{
+        position: relative;
+        top: -9px;
+        left: 10px;
+      }
+      .three {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+
+        background: url("./images/sprite.png") 111px 59px;
+      }
+      .three1{
+        position: relative;
+        top: -9px;
+        left: 10px;
+      }
+      .four {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+
+        background: url("./images/sprite.png") 380px -1px;
+      }
+      .four1{
+        position: relative;
+        top: -9px;
+        left: 10px;
+      }
+      .five {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+
+        background: url("./images/sprite.png") 67px 100px;
+      }
+      .five1{
+        position: relative;
+        top: -9px;
+      }
+      .six {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+        background: url("./images/sprite.png") 0px 0px;
+      }
+      .six1{
+        position: relative;
+        top: -9px;
+      }
+      .seven {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+        background: url("./images/sprite.png") 267px 103px;
+      }
+      .seven1{
+        position: relative;
+        top: -9px;
+      }
+      .eight {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+
+        background: url("./images/sprite.png") 69px 62px;
+      }
+      .eight1{
+        position: relative;
+        top: -9px;
+      }
+      .nine {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+
+        background: url("./images/sprite.png") -133px 0px;
+      }
+      .nine1{
+        position: relative;
+        top: -9px;
+        left:10px;
+      }
+      .ten {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+
+        background: url("./images/sprite.png") 23px 103px;
+      }
+      .ten1{
+        position: relative;
+        top: -9px;
+        left:10px;
+      }
+      .eleven {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+
+        background: url("./images/sprite.png") -133px -86px;
+      }
+      .eleven1{
+        position: relative;
+        top: -9px;
+      }
+      .twelve {
+        width: 23px;
+        height: 22px;
+        border: 1px solid white;
+        margin: 12px auto;
+        background: url("./images/sprite.png") -44px -1px;
+      }
+      .twelve1{
+        position: relative;
+        top: -9px;
+        left:10px;
+      }
+      .qiang{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+        border: solid;
+        border-width: 2px 6px;
+        border-color: #e01121 #e01121 #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <div class="guanggao t"> </div>
+    </div>
+
+    <div class="shortcut">
+      <div class="t">
+        <span><img class="shortcut_2" src="./jingdong/weizhi.png">北京</span>
+        <ul class="shortcut_1">
+          <li><a href="#">您好，请登录&nbsp;</a></li>
+          <li><a href="#"style="color:red;">&nbsp;免费注册&nbsp;</a></li>
+          <li><a href="#">&nbsp;我的订单&nbsp;</a></li>
+          <li><a href="#">&nbsp;我的京东&nbsp;</a></li>
+          <li><a href="#">&nbsp;京东会员&nbsp;</a></li>
+          <li><a href="#">&nbsp;企业采购&nbsp;</a></li>
+          <li><a href="#">&nbsp;客户服务&nbsp;</a></li>
+          <li><a href="#">&nbsp;网站导航&nbsp;</a></li>
+          <li><a href="#">&nbsp;手机京东&nbsp;</a></li>
+        </ul>
+      </div>
+
+      <div class="neck">
+        <div class="neck t">
+          <div class="logo"> </div>
+          <img class="taobao" src="./jingdong/taobao.jpg">
+          <div class="sousuo">
+            <img  class="sousuo_1" src="./jingdong/sousuo.png">
+            <span class="sousuo_2"></span>
+          </div>
+          <div class="che">
+              <span class="che_1" style="color:red;"><img class="che_2"src="./jingdong/che.png">&nbsp;&nbsp;&nbsp;我的购物车</span>
+          </div>
+
+          <div class="sousuo_3">
+            <ul>
+              <li><a href="#"style="color:red;">17.5°橙&nbsp;</a></li>
+              <li><a href="#">&nbsp;1元抵288</a></li>
+              <li><a href="#">&nbsp;爱宠之家</a></li>
+              <li><a href="#">&nbsp;杰克琼斯</a></li>
+              <li><a href="#">&nbsp;低至5折</a></li>
+              <li><a href="#">&nbsp;休闲食品</a></li>
+              <li><a href="#">&nbsp;打底衫</a></li>
+              <li><a href="#">&nbsp;三鹿奶粉</a></li>
+              <li><a href="#">&nbsp;烘干机</a></li>
+            </ul>
+          </div>
+          <div class="sousuo_4">
+          <ul>
+            <li><a href="#">&nbsp;&nbsp;秒杀&nbsp;&nbsp;</a></li>
+            <li><a href="#">&nbsp;&nbsp;优惠券&nbsp;&nbsp;</a></li>
+            <li><a href="#">&nbsp;&nbsp;闪购&nbsp;&nbsp;</a></li>
+            <li><a href="#">&nbsp;&nbsp;拍卖&nbsp;&nbsp;</a></li>
+            <li><a href="#">&nbsp;&nbsp;服装城&nbsp;&nbsp;</a></li>
+            <li><a href="#">&nbsp;&nbsp;京东超市&nbsp;&nbsp;</a></li>
+            <li><a href="#">&nbsp;&nbsp;生鲜&nbsp;&nbsp;</a></li>
+            <li><a href="#">&nbsp;&nbsp;全球购&nbsp;&nbsp;</a></li>
+            <li><a href="#">&nbsp;&nbsp;京东金融&nbsp;&nbsp;</a> <img class="fupin"src="./jingdong/fupin.png"></li>
+          </ul>
+          </div>
+      </div>
+
+      <div class="foot">
+        <div class="foot t">
+          <div class="foot_zuo">
+            <ul>
+              <li><a href="#">&nbsp;&nbsp;家用电器</a></li>
+              <li><a href="#">&nbsp;&nbsp;手机&nbsp;/&nbsp;</a><a href="#">&nbsp;运营商&nbsp;/</a><a href="#">数码/</a></li>
+              <li><a href="#">&nbsp;&nbsp;电脑&nbsp;/&nbsp;</a><a href="#">办公</a></li>
+              <li><a href="#">&nbsp;&nbsp;家居&nbsp;/&nbsp;</a><a href="#">家具&nbsp;/&nbsp;</a><a href="#">家装&nbsp;/&nbsp;</a><a href="#">&nbsp;厨具</a></li>
+              <li><a href="#">&nbsp;&nbsp;男装&nbsp;/&nbsp;</a><a href="#">女装&nbsp;/&nbsp;</a><a href="#">童装&nbsp;/&nbsp;</a><a href="#">&nbsp;内衣</a></li>
+              <li><a href="#">&nbsp;&nbsp;美妆个护&nbsp;/&nbsp;</a><a href="#">宠物</a></li>
+              <li><a href="#">&nbsp;&nbsp;女鞋&nbsp;/&nbsp;</a><a href="#">箱包&nbsp;/</a><a href="#">钟表&nbsp;/</a><a href="#">&nbsp;珠宝</a></li>
+              <li><a href="#">&nbsp;&nbsp;男鞋&nbsp;/&nbsp;</a><a href="#">运动&nbsp;/&nbsp;</a><a href="#">户外</a></li>
+              <li><a href="#">&nbsp;&nbsp;汽车&nbsp;/&nbsp;</a><a href="#">汽车用品</a></li>
+              <li><a href="#">&nbsp;&nbsp;母婴&nbsp;/&nbsp;</a><a href="#">玩具乐器</a></li>
+              <li><a href="#">&nbsp;&nbsp;食品&nbsp;/&nbsp;</a><a href="#">酒类&nbsp;/</a><a href="#">生鲜&nbsp;/</a><a href="#">&nbsp;特产</a></li>
+              <li><a href="#">&nbsp;&nbsp;礼品鲜花&nbsp;/&nbsp;</a><a href="#">农资绿植</a></li>
+              <li><a href="#">&nbsp;&nbsp;医药保健&nbsp;/&nbsp;</a><a href="#">计生情趣</a></li>
+              <li><a href="#">&nbsp;&nbsp;图书&nbsp;/&nbsp;</a><a href="#">音像&nbsp;/&nbsp;</a><a href="#">电子书</a></li>
+              <li><a href="#">&nbsp;&nbsp;机票&nbsp;/&nbsp;</a><a href="#">酒店&nbsp;/&nbsp;</a><a href="#">旅游&nbsp;&nbsp;/</a><a href="#">&nbsp;生活</a></li>
+              <li><a href="#">&nbsp;&nbsp;理财&nbsp;/&nbsp;</a><a href="#">众筹&nbsp;/&nbsp;</a><a href="#">白条&nbsp;/</a><a href="#">&nbsp;保险</a></li>
+            </ul>
+          </div>
+
+          <div class="foot_zhong"><img src="./jingdong/foot1.jpg"></div>
+          <div class="foot_zhong1"><img src="./jingdong/foot2.jpg"> <img class="foot_zhong2" src="./jingdong/foot3.jpg"></div>
+
+          <div class="foot_you">
+            <span><a href="#"><img class="foot_you1"src="./jingdong/no_login.jpg"></a>
+            <ul>
+              <li><a class="foot_you2" href="#">Hi,欢迎来到京东</li>
+              <li><a  class="foot_you3"href="#">登录 注册</a></li>
+            </ul>
+            </span>
+            <span class="foot_you4"><a href="#">新人福利</a></span>
+            <span class="foot_you5"><a href="#">PLUS会员</a></span>
+
+            <div class="foot_you6">
+              <p>----------------------------------------</p>
+              <span>&nbsp;促销&nbsp;丨&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公告&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多</span>
+              <p>----------------------------------------</p>
+              <p>&nbsp;七夕购鲜花情人</p>
+              <p>&nbsp;开学顶火车票，领优惠卷！</p>
+              <p>&nbsp;每日享折扣  京东品质游</p>
+              <p>&nbsp;三鹿奶粉 喝不死找我</p>
+            </div>
+            <div class="foot_you7">
+              <div class="foot_you71">
+                <ul>
+                  <li class="one"></li>
+                </ul>
+                <span class="one1"><a href="#">话费</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="two"></li>
+                </ul>
+                <span class="two1"><a href="#">机票</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="three"></li>
+                </ul>
+                <span class="three1"><a href="#">酒店</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="four"></li>
+                </ul>
+                <span class="four1"><a href="#">游戏</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="five"></li>
+                </ul>
+                <span class="five1"><a href="#">企业购</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="six"></li>
+                </ul>
+                <span class="six1"><a href="#">加油卡</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="seven"></li>
+                </ul>
+                <span class="seven1"><a href="#">电影票</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="eight"></li>
+                </ul>
+                <span class="eight1"><a href="#">火车票</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="nine"></li>
+                </ul>
+                <span class="nine1"><a href="#">众筹</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="ten"></li>
+                </ul>
+                <span class="ten1"><a href="#">理财</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="eleven"></li>
+                </ul>
+                <span class="eleven1"><a href="#">礼品卡</a></span>
+              </div>
+              <div class="foot_you71">
+                <ul>
+                  <li class="twelve"></li>
+                </ul>
+                <span class="twelve1"><a href="#">白条</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>

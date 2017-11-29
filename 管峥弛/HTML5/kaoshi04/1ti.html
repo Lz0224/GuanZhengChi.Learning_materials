@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>进度条</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .loading {
+      background: rgb(101, 232, 132);
+      position: fixed;
+      height: 10px;
+      top: 0;
+      z-index: 9999;
+    }
+
+    .hh{
+      position: relative;
+    }
+    .gg{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loading"></div>
+  <script src="./jquery-3.0.0.js" charset="utf-8"></script>
+  <div id="header">
+    <img class="hh" src="./img/3.jpg" alt="">
+    <img  class="gg" src="./img/1.jpg" alt="">
+  </div>
+  <script type="text/javascript">
+    $('.loading').animate({
+      'width': '33%'
+    }, 200);
+  </script>
+  <!-- <div id="mainpage"><img src="./img/2.jpg" alt=""></div> -->
+  <script type="text/javascript">
+    $('.loading').animate({
+      'width': '55%'
+    }, 200);
+  </script>
+  <!-- <div id="sider"><img src="./img/3.jpg" alt=""></div> -->
+  <script type="text/javascript">
+    $('.loading').animate({
+      'width': '80%'
+    }, 200);
+  </script>
+  <div id="footer"></div>
+  <script type="text/javascript">
+    $('.loading').animate({
+      'width': '100%'
+    }, 200);
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.loading').fadeOut();
+    });
+  </script>
+
+</body>
+
+</html>

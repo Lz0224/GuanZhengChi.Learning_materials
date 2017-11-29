@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完数</title>
+    <style type="text/css">
+        html,body{
+            padding: 0;margin: 0; width: 100%; height: 100%;
+        }
+        #res{
+            padding: 5px 20px;;
+        }
+    </style>
+</head>
+<body>
+<h1>求1000以内的完数。</h1>
+<p>
+    完数，一般指完全数，一个自然数如果它的所有真因子（即除了自身以外的约数）的和等于该数，那么这个数就是完全数，如:6的真因子有1 、2、3，6=1+2+3，所以6是一个完全数。
+</p>
+<div id="res">
+<h2>结果:</h2>
+</div>
+<script type="text/javascript">
+    (function(window,document){
+        function displayRes(){
+            var arr=[];
+            var max=1000;
+            arr=getCompleteNum(max);
+            for(var i=0;i<arr.length;i++){
+                var div=document.createElement("div");
+                var text=document.createTextNode(arr[i]);
+                div.appendChild(text);
+                document.getElementById("res").appendChild(div);
+            }
+        }
+        function getCompleteNum(max){
+            var arr=[];
+            for(var i=1;i<=max;i++){
+                var h=0;
+                for(var d=1;d<i;d++){
+                    if(i%d===0){
+                        h+=d;
+                    }
+                }
+                if(h===i){
+                    arr.push(i);
+                }
+            }
+            return arr;
+        }
+        displayRes();
+    })(window,document)
+</script>
+</body>
+</html>

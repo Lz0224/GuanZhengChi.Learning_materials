@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+
+    /*
+    touchstart touchmove touchend
+    */
+      var  startX,startY,endX,endY,x,y;
+      // 开始
+      document.addEventListener("touchstart", function(event){
+        // console.log("start x:", event.touches[0].clientX);
+        // console.log("start y:", event.touches[0].clientY);
+        startX = event.touches[0].clientX;
+        startY = event.touches[0].clientY;
+      },false);
+
+      // 过程
+      document.addEventListener("touchmove", function(event){
+        console.log("moving.....");
+      },false);
+
+      // 结束
+      document.addEventListener("touchend", function(event){
+        // console.log("end x",event.changedTouches[0].clientX);
+        // console.log("end y",event.changedTouches[0].clientY);
+        endX = event.changedTouches[0].clientX;
+        endY = event.changedTouches[0].clientY;
+        fun();
+      },false);
+
+        // var  startX,startY,endX,endY,x,y;
+        function fun(){
+          x = endX - startX;
+          y = endY - startY;
+          console.log(x,y);
+          if(Math.abs(x) >= Math.abs(y)){
+            if(x > 0){
+              alert("手势为右滑动");
+            } else{
+              alert("手势为左滑动");
+            };
+          } else{
+            if(y > 0){
+              alert("手势为下滑动");
+            }else{
+              alert("手势为上滑动");
+            };
+          };
+        };
+
+    </script>
+
+  </body>
+</html>

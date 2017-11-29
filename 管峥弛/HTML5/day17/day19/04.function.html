@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>声明提升</title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+
+      function fun(){
+        console.log("I am fun .....");
+      }
+      var fun = 10;//不管位置在函数的上面或下面 fun有值输出fun fun没有值则输出上面的函数！！！！
+
+      /*等价代码*/
+      /*
+      var fun;
+      function fun(){
+        console.log("I am fun....");
+      }
+      fun = 10;
+      */
+
+      console.log(fun);
+
+    </script>
+  </body>
+</html>

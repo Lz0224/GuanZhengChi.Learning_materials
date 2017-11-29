@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .kuang{
+        width: 500px;
+        height: 500px;
+        /*background-color: black;*/
+        position: relative;
+        top: 150px;
+        left: 200px;
+      }
+
+      .cuowu{
+        width: 300px;
+        height: 40px;
+        display: none;
+        margin-left: 20px;
+      }
+      .yonghu{
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        border: 1px black solid;
+      }
+
+      .mima{
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        border: 1px black solid;
+      }
+
+      .denglu{
+        width:300px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        outline: none;
+      }
+
+      input{
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kuang">
+
+      <div class="cuowu">
+        <span style="color:red";>您输入的账号或密码错误</span>
+      </div>
+      <input class="yonghu" type="text" placeholder="请输入用户名或账号">
+      <input class="mima" type="password" placeholder="请输入您的密码">
+      <input class="denglu" type="button" value="立即登录">
+
+      <script src="./js/jquery.min.js" charset="utf-8"></script>
+      <script type="text/javascript">
+
+
+        $(".denglu").click(function(){
+          var u= $(".yonghu").val()
+          var p= $(".mima").val()
+          console.log(u,p);
+          $.ajax({
+            method:"post",
+            url:"/login",
+            data:{name:u, passwd:p},
+            success: function(data,textStatus,jqXHR){
+              console.log(data);
+              if ((data == "OK")){
+                window.location = "https://www.jd.com/";
+              }else{
+                $(".cuowu").css("display","inline")
+              }
+            }
+          });
+        });
+
+      </script>
+    </div>
+  </body>
+</html>

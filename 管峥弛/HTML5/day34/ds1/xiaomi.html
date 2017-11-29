@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>小米</title>
+  <link rel="stylesheet" type="text/css" href="./font_u58034oxbq1o47vi/iconfont.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .body {
+      background: #f5f5f5;
+    }
+
+    .jia {
+      width: 1226px;
+      height: 686px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .lan {
+      position: relative;
+      height: 58px;
+    }
+
+    .zi {
+      margin: 0;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 58px;
+      color: #333;
+    }
+
+    .lan_2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .zi_2 {
+
+      margin: 0;
+      padding: 16px 0 0;
+      list-style-type: none;
+      font-size: 16px;
+    }
+
+    .active {
+      color: #ff6700;
+      border-bottom: 2px solid #ff6700;
+    }
+
+    .zi_2 li {
+      display: inline-block;
+      margin: 0px 0 0 33px
+    }
+
+    .zhong {
+      width: 1226px;
+      height: 628px;
+    }
+
+    .row {
+      margin-left: -14px;
+    }
+
+    .zt {
+      height: 621px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      margin: 0 0 -14px -14px;
+      float: left;
+      margin-left: 14px;
+      min-height: 1px;
+      height: 614px;
+      transition: all .2s linear;
+    }
+
+    .zt:hover {
+      transform: translate3d(0, -2px, 0);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .zt_1 {
+      position: relative;
+      z-index: 1;
+      float: left;
+      width: 234px;
+      margin-left: 14px;
+      margin-bottom: 14px;
+      background: #fff;
+    }
+
+    .show {
+      float: left;
+      margin-left: 14px;
+      min-height: 1px;
+    }
+
+     .zt_2_0{
+      width: 992px;
+      height: 621px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      margin: 0 0 -14px -14px;
+    }
+
+    .zt_2_1 {
+      position: relative;
+      z-index: 1;
+      float: left;
+      width: 234px;
+      margin-left: 14px;
+      margin-bottom: 14px;
+      background: #fff;
+    }
+
+    .biao {
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      float: left;
+      width: 234px;
+      margin-left: 14px;
+      margin-bottom: 14px;
+      background: #fff;
+      transition: all .2s linear;
+    }
+
+    .biao:hover {
+      z-index: 2;
+      transform: translate3d(0, -2px, 0);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .biao:hover .ping {
+      bottom: 0px;
+    }
+
+    .biao_1 {
+      height: 246px;
+      padding: 34px 0 20px;
+    }
+
+    .biao_2 {
+      height: 93px;
+      padding-top: 50px;
+    }
+
+    .tu-img {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 18px;
+    }
+
+    .tu-img img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .title {
+      color: #333;
+      margin: 0 10px;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .title a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+    }
+
+    .desc {
+      margin: 0 10px 10px;
+      height: 18px;
+      font-size: 12px;
+      text-align: center;
+      color: #b0b0b0;
+    }
+
+    .price {
+      margin: 0 10px 10px;
+      text-align: center;
+      color: #ff6700;
+    }
+
+    .zhe {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 2;
+      width: 64px;
+      height: 20px;
+      margin-left: -32px;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      color: #fff
+    }
+
+    .tu-img2 {
+      position: absolute;
+      right: 20px;
+      top: 32px;
+      width: 80px;
+      height: 80px;
+    }
+
+    .tu-img2 img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .title_2 {
+      margin: -10px 110px 5px 30px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .price2 {
+      margin: 0 110px 0 30px;
+      font-size: 12px;
+      color: #ff6700;
+    }
+
+    .zhe_1 {
+      background-color: #e53935;
+    }
+
+    .zhe_2 {
+      background-color: #83c44e;
+      z-index: 5;
+    }
+
+    .zhe_3 {
+      background-color: #ffac13;
+      z-index: 4;
+    }
+
+    .biao_2 i {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    .figure-more {
+      position: absolute;
+      right: 35px;
+      top: 48px;
+      width: 48px;
+      height: 48px;
+    }
+
+    .biao_2 .figure-more a {
+      display: block;
+      color: #ff6700;
+      text-decoration: none;
+    }
+
+    .mor {
+      display: block;
+      margin: 0 110px 0 30px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .mor span {
+      display: block;
+      font-size: 12px;
+      color: #757575;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .ping {
+      position: absolute;
+      bottom: -75px;
+      height: 75px;
+      left: 0;
+      /*z-index: 3;*/
+      width: 234px;
+      font-size: 12px;
+      background: #ff6700;
+      transition: all .2s linear;
+    }
+
+    .ping a {
+      display: block;
+      padding: 8px 30px;
+      outline: 0;
+    }
+
+    .ping_1 {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .ping_2 {
+      color: #fff;
+      color: rgba(255, 255, 255, 0.6);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .show>ul {
+      display: none;
+    }
+
+    .show>ul.zt_2_0{
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="jia">
+    <div class="lan">
+      <h2 class="zi">家电</h2>
+      <div class="lan_2">
+        <ul class="zi_2">
+          <li class="active zi_3">热门</li>
+          <li>电视影音</li>
+          <li>电脑</li>
+          <li>家居</li>
+        </ul>
+      </div>
+    </div>
+    <div class="zhong">
+      <div class="row">
+        <div class="zt zt_1">
+          <a href="#"><img src="./img/mi1.jpg" alt=""></a>
+        </div>
+
+        <div class="show">
+          <ul class="zt_2_0">
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/mishi1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米电视4A 32</a></h3>
+              <p class="desc">64位四核处理器/1GB+4GB大内存</p>
+              <p class="price"><span>1099</span>元</p>
+              <div class="zhe zhe_1"> 享9.2折</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">小米值得拥有,我们已离不开您!这是要搞基的节奏</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/midian2.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米电视4 55英寸</a></h3>
+              <p class="desc">4.9mm极超薄机身/4k高清HDR</p>
+              <p class="price"><span>3999</span>元</p>
+              <div class="zhe zhe_1"> 享9.2折</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">好评，真的好薄，薄到让旁边的PS4都显小了，是幻觉吗...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/mibi1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米笔记本Pro 15.6英寸</a></h3>
+              <p class="desc">全金属强化机身/FHD全贴合屏幕</p>
+              <p class="price"><span>5999</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/mibi2.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米笔记本Air 13.3"i7处理器</a></h3>
+              <p class="desc">Intel酷睿i7处理器,8GB内存+256GB</p>
+              <p class="price"><span>5999</span>元</p>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">合格的米粉，哈哈，感觉很高大上，外观又漂亮，绝对是颜...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/lou1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米漏油器3C</a></h3>
+              <p class="desc">APP智能控制,安全防蹭网</p>
+              <p class="price"><span>89</span>元</p>
+              <div class="zhe zhe_3">免邮费</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">自从有了这款路由器，看电影再也不卡了，在卫生间也能无...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"></a><img src="./img/kong1.jpg" alt=""></div>
+              <h3 class="title"><a href="#">小米移动电源2C 20000mAh</a></h3>
+              <p class="desc"></p>
+              <p class="price"><span>89</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">很不错，充电速度杠杠的</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/shui1.jpg" alt=""></a></div>
+              <h3 class="title">米家电水壶</h3>
+              <p class="desc">一杯水,是一家人的安心</p>
+              <p class="price"><span>99</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">不错！一如既往的好！小米打造国人品牌的形象，这个价这...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_2">
+              <div class="tu-img2"><a href="#"><img src="./img/mishe1.jpg" alt=""></a></div>
+              <h3 class="title_2">小白摄像机</h3>
+              <p class="price2"><span>399</span>元</p>
+
+            </li>
+            <li class="biao biao_2">
+              <div class="figure-more"><a href="#"><i class="iconfont icon-xiangyou"></i></a>
+              </div>
+              <a class="mor" href="#">阅览更多
+                <span>热门</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/ds1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米电视4A 32</a></h3>
+              <p class="desc">64位四核处理器/1GB+4GB大内存</p>
+              <p class="price"><span>1099</span>元</p>
+              <div class="zhe zhe_1"> 享9.2折</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">小米值得拥有,我们已离不开您!这是要搞基的节奏</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/ds2.png" alt=""></a></div>
+              <h3 class="title"><a href="#">小米电视4 55英寸</a></h3>
+              <p class="desc">4.9mm极超薄机身/4k高清HDR</p>
+              <p class="price"><span>3999</span>元</p>
+              <div class="zhe zhe_1"> 享9.2折</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">好评，真的好薄，薄到让旁边的PS4都显小了，是幻觉吗...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/ds3.png" alt=""></a></div>
+              <h3 class="title"><a href="#">小米笔记本Pro 15.6英寸</a></h3>
+              <p class="desc">全金属强化机身/FHD全贴合屏幕</p>
+              <p class="price"><span>5999</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/ds4.png" alt=""></a></div>
+              <h3 class="title"><a href="#">小米笔记本Air 13.3"i7处理器</a></h3>
+              <p class="desc">Intel酷睿i7处理器,8GB内存+256GB</p>
+              <p class="price"><span>5999</span>元</p>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">合格的米粉，哈哈，感觉很高大上，外观又漂亮，绝对是颜...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/ds5.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米漏油器3C</a></h3>
+              <p class="desc">APP智能控制,安全防蹭网</p>
+              <p class="price"><span>89</span>元</p>
+              <div class="zhe zhe_3">免邮费</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">自从有了这款路由器，看电影再也不卡了，在卫生间也能无...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"></a><img src="./img/ds6.jpg" alt=""></div>
+              <h3 class="title"><a href="#">小米移动电源2C 20000mAh</a></h3>
+              <p class="desc"></p>
+              <p class="price"><span>89</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">很不错，充电速度杠杠的</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/ds7.jpg" alt=""></a></div>
+              <h3 class="title">米家电水壶</h3>
+              <p class="desc">一杯水,是一家人的安心</p>
+              <p class="price"><span>99</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">不错！一如既往的好！小米打造国人品牌的形象，这个价这...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_2">
+              <div class="tu-img2"><a href="#"><img src="./img/ds8.jpg" alt=""></a></div>
+              <h3 class="title_2">小白摄像机</h3>
+              <p class="price2"><span>399</span>元</p>
+
+            </li>
+            <li class="biao biao_2">
+              <div class="figure-more"><a href="#"><i class="iconfont icon-xiangyou"></i></a>
+              </div>
+              <a class="mor" href="#">阅览更多
+                <span>热门</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/mishi1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米电视4A 32</a></h3>
+              <p class="desc">64位四核处理器/1GB+4GB大内存</p>
+              <p class="price"><span>1099</span>元</p>
+              <div class="zhe zhe_1"> 享9.2折</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">小米值得拥有,我们已离不开您!这是要搞基的节奏</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/midian2.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米电视4 55英寸</a></h3>
+              <p class="desc">4.9mm极超薄机身/4k高清HDR</p>
+              <p class="price"><span>3999</span>元</p>
+              <div class="zhe zhe_1"> 享9.2折</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">好评，真的好薄，薄到让旁边的PS4都显小了，是幻觉吗...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/mibi1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米笔记本Pro 15.6英寸</a></h3>
+              <p class="desc">全金属强化机身/FHD全贴合屏幕</p>
+              <p class="price"><span>5999</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/mibi2.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米笔记本Air 13.3"i7处理器</a></h3>
+              <p class="desc">Intel酷睿i7处理器,8GB内存+256GB</p>
+              <p class="price"><span>5999</span>元</p>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">合格的米粉，哈哈，感觉很高大上，外观又漂亮，绝对是颜...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/lou1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米漏油器3C</a></h3>
+              <p class="desc">APP智能控制,安全防蹭网</p>
+              <p class="price"><span>89</span>元</p>
+              <div class="zhe zhe_3">免邮费</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">自从有了这款路由器，看电影再也不卡了，在卫生间也能无...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"></a><img src="./img/kong1.jpg" alt=""></div>
+              <h3 class="title"><a href="#">小米移动电源2C 20000mAh</a></h3>
+              <p class="desc"></p>
+              <p class="price"><span>89</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">很不错，充电速度杠杠的</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/shui1.jpg" alt=""></a></div>
+              <h3 class="title">米家电水壶</h3>
+              <p class="desc">一杯水,是一家人的安心</p>
+              <p class="price"><span>99</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">不错！一如既往的好！小米打造国人品牌的形象，这个价这...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_2">
+              <div class="tu-img2"><a href="#"><img src="./img/mishe1.jpg" alt=""></a></div>
+              <h3 class="title_2">小白摄像机</h3>
+              <p class="price2"><span>399</span>元</p>
+
+            </li>
+            <li class="biao biao_2">
+              <div class="figure-more"><a href="#"><i class="iconfont icon-xiangyou"></i></a>
+              </div>
+              <a class="mor" href="#">阅览更多
+                <span>热门</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/mishi1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米电视4A 32</a></h3>
+              <p class="desc">64位四核处理器/1GB+4GB大内存</p>
+              <p class="price"><span>1099</span>元</p>
+              <div class="zhe zhe_1"> 享9.2折</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">小米值得拥有,我们已离不开您!这是要搞基的节奏</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/midian2.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米电视4 55英寸</a></h3>
+              <p class="desc">4.9mm极超薄机身/4k高清HDR</p>
+              <p class="price"><span>3999</span>元</p>
+              <div class="zhe zhe_1"> 享9.2折</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">好评，真的好薄，薄到让旁边的PS4都显小了，是幻觉吗...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/mibi1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米笔记本Pro 15.6英寸</a></h3>
+              <p class="desc">全金属强化机身/FHD全贴合屏幕</p>
+              <p class="price"><span>5999</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/mibi2.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米笔记本Air 13.3"i7处理器</a></h3>
+              <p class="desc">Intel酷睿i7处理器,8GB内存+256GB</p>
+              <p class="price"><span>5999</span>元</p>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">合格的米粉，哈哈，感觉很高大上，外观又漂亮，绝对是颜...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/lou1.jpg" alt=""></a></div>
+              <h3 class="title"><a href="#">小米漏油器3C</a></h3>
+              <p class="desc">APP智能控制,安全防蹭网</p>
+              <p class="price"><span>89</span>元</p>
+              <div class="zhe zhe_3">免邮费</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">自从有了这款路由器，看电影再也不卡了，在卫生间也能无...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"></a><img src="./img/kong1.jpg" alt=""></div>
+              <h3 class="title"><a href="#">小米移动电源2C 20000mAh</a></h3>
+              <p class="desc"></p>
+              <p class="price"><span>89</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">很不错，充电速度杠杠的</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_1">
+              <div class="tu-img"><a href="#"><img src="./img/shui1.jpg" alt=""></a></div>
+              <h3 class="title">米家电水壶</h3>
+              <p class="desc">一杯水,是一家人的安心</p>
+              <p class="price"><span>99</span>元</p>
+              <div class="zhe zhe_2">新品</div>
+              <div class="ping">
+                <a href="#">
+                  <span class="ping_1">不错！一如既往的好！小米打造国人品牌的形象，这个价这...</span>
+                  <span class="ping_2">来自于 火星 的评价</span>
+                </a>
+              </div>
+            </li>
+            <li class="biao biao_2">
+              <div class="tu-img2"><a href="#"><img src="./img/mishe1.jpg" alt=""></a></div>
+              <h3 class="title_2">小白摄像机</h3>
+              <p class="price2"><span>399</span>元</p>
+
+            </li>
+            <li class="biao biao_2">
+              <div class="figure-more"><a href="#"><i class="iconfont icon-xiangyou"></i></a>
+              </div>
+              <a class="mor" href="#">阅览更多
+                <span>热门</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var zi_2 = document.getElementsByClassName('zi_2')[0].children;
+    var contents = document.getElementsByClassName("show")[0].children;
+
+    for (var i = 0; i < zi_2.length; i++) {
+
+      (function(i) {
+        zi_2[i].onmouseover = function(event) {
+
+          for (var j = 0; j < zi_2.length; j++) {
+            zi_2[j].className = "";
+            console.log(contents[j]);
+            contents[j].className = "";
+          }
+
+          this.className = "active";
+          contents[i].className = "zt_2_0";
+          // console.log("对应的内容索引 : ",i);
+        };
+      })(i);
+    }
+  </script>
+</body>

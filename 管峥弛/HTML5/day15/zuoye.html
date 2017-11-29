@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>左右两栏不动 中间一栏随屏幕动</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .one{
+        width: 100%;
+        height: 200px;
+        display: flex;
+      }
+
+      .two{
+        width: 200px;
+        height: 200px;
+        background: rgb(224, 21, 180);
+      }
+
+      .three{
+        height:200px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        background: rgb(200, 214, 35);
+      }
+
+      .four{
+        width: 200px;
+        height: 200px;
+        background: rgb(27, 228, 228);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <div class="two"></div>
+      <div class="three"></div>
+      <div class="four"></div>
+    </div>
+  </body>
+</html>

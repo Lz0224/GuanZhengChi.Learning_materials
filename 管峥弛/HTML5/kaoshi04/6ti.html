@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>深度克隆</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    var deepClone = function (o){
+    var copy = Object.create( Object.getPrototypeOf(o) );
+    var propNames = Object.getOwnPropertyNames(o);
+
+    propNames.forEach(function(name){
+      var desc = Object.getOwnPropertyDescriptor(o, name);
+      Object.defineProperty(copy, name, desc);
+    });
+
+    return copy;
+    }
+
+    var obj1 = {family:{brother:"小明",father:"大纲",mother:"丽丽"},name:"gino",sex:"male",age:"27"};
+    var obj2 = deepClone(obj1);
+    obj1.sex = "close";
+    console.log(obj1);
+    console.log(obj2);
+    </script>
+  </body>
+</html>

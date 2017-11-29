@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .upload{
+        display: inline-block;
+        width: 120px;
+        height: 60px;
+        line-height: 60px;
+        background: #009ad6;
+        position: relative;
+        top: 300px;
+        left: 300px;
+        text-align: center;
+      }
+
+      .upload> input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*透明度为0*/
+        opacity: 0;
+        /*引用外部鼠标样式*/
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="upload">
+      上传文件
+      <input type="file">
+    </div>
+  </body>
+</html>

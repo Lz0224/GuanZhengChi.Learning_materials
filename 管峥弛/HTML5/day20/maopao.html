@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>冒泡排序 数组去重 十进制与二进制转换</title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+      console.log('========================冒泡排序============================');
+      function sort(maopao){
+        for(var i = 0; i < maopao.length - 1; i++){
+          for(var j = 0; j < maopao.length - i - 1; j++){
+            if(maopao[j] > maopao[j+1]){
+              var swap = maopao[j];
+              maopao[j] = maopao[j + 1];
+              maopao[j + 1] = swap;
+            }
+          }
+        }
+      }
+      var maopao = [3, 6, 5, 7, 4, 1, 9, 2, 10, 8];
+      sort(maopao);
+      console.log(maopao);
+
+
+      console.log('====================十进制与二进制转换============================');
+
+          var a = 12;
+          var b = 0;
+          var c = 3;
+          var arr = [];
+          for (var i = 0; ; i++) {
+
+          if (c == 0) {
+
+          break;
+
+          } else {
+
+          b = a % 2;
+
+          c = parseInt(a / 2);
+
+
+          a = c;
+
+          arr.push(b);
+
+          }
+
+          };
+
+          console.log(arr.reverse().join("").toString(2));
+
+
+      console.log('====================数组去重============================');
+          Array.prototype.quchong = function(){
+           var res = [this[0]];
+           for(var i = 1; i < this.length; i++){
+            var repeat = false;
+            for(var j = 0; j < res.length; j++){
+             if(this[i] == res[j]){
+              repeat = true;
+              break;
+             }
+            }
+            if(!repeat){
+             res.push(this[i]);
+            }
+           }
+           return res;
+          }
+          var arr = [1, 'a', 'a', 'b', 'd', 'e', 'e', 1, 0]
+          console.log(arr.quchong());
+    </script>
+  </body>
+</html>

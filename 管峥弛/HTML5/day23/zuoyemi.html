@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>小米</title>
+    <link rel="stylesheet" type="text/css" href="./font/iconfont.css">
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      body{
+        background: #f5f5f5;
+      }
+      .w{
+        margin: 0px auto;
+        width: 1226px;
+        position: relative;
+      }
+
+      li{
+        list-style: none;
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+      .head{
+        width: 60px;
+        height: 40px;
+      }
+
+      .head_1{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+
+      .head_1>ul>li{
+        float: left;
+        margin: 10px;
+      }
+
+      .head_1>ul>li>a:link{
+        color: black;
+      }
+      .head_1>ul>li>a:visited{
+        color: black;
+      }
+      .head_1>ul>li>a:hover{
+        color: #ff6700;
+        border-bottom: 2px #ff6700 solid;
+      }
+      .zhongzuo>img{
+        width: 234px;
+        height: 300px;
+        margin-top: 20px;
+        box-shadow:0px 15px 30px rgba(0, 0, 0, 0.1);
+      }
+      .zhongzuo-active{
+        transition: all .8s linear;
+      }
+      .zhongzuo:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .zhongzuo1>img{
+        width: 234px;
+        height: 300px;
+        margin-top: 10px;
+      }
+      .zhongzuo1:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .show{
+        position: absolute;
+        right: 0px;
+        top: 60px;
+        width: 992px;
+        height: 614px;
+        /*border: 1px solid rgb(223, 25, 139);*/
+      }
+      .zhong_1{
+        float: left;
+        margin: 5px 5px;
+        width: 234px;
+        height: 300px;
+        background: #fff;
+        /*border: 1px solid black;*/
+      }
+      .zhong_1:hover{
+        transform: translate3d(0,-4px,0);
+      }
+
+      .zhong_2{
+        float: left;
+        width: 234px;
+        height: 300px;
+        background: #fff;
+        /*border: 1px solid black;*/
+        margin: 5px 5px;
+      }
+      .zhong_2:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .zhong_3{
+        float: left;
+        width: 234px;
+        height: 300px;
+        background: #fff;
+        /*border: 1px solid black;*/
+        margin: 5px 5px;
+      }
+      .zhong_3:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .zhong_4{
+        float: left;
+        width: 234px;
+        height: 300px;
+        background: #fff;
+        /*border: 1px solid black;*/
+        margin: 5px 5px;
+      }
+      .zhong_4:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .zhong_5{
+        float: left;
+        width: 234px;
+        height: 300px;
+        background: #fff;
+        /*border: 1px solid black;*/
+        margin: 5px 5px;
+      }
+      .zhong_5:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .zhong_6{
+        float: left;
+        width: 234px;
+        height: 300px;
+        background: #fff;
+        /*border: 1px solid black;*/
+        margin: 5px 5px;
+      }
+      .zhong_6:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .zhong_7{
+        float: left;
+        width: 234px;
+        height: 300px;
+        background: #fff;
+        /*border: 1px solid black;*/
+        margin: 5px 5px;
+      }
+      .zhong_7:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .zhong_8{
+        float: left;
+        width: 234px;
+        height: 143px;
+        background: #fff;
+        margin-top:5px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .zhong_8:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .zhong_9{
+        float: left;
+        width: 234px;
+        height: 143px;
+        background: #fff;
+        margin-top: 14px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .zhong_9:hover{
+        transform: translate3d(0,-4px,0);
+      }
+      .zhong_11{
+        width: 64px;
+        height: 20px;
+        margin: 0px auto;
+        background-color: #83c44e ;
+        color: white;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .zhong_12>img{
+        width: 150px;
+        height: 150px;
+        margin: 20px 47px;
+      }
+      .zhong_13:link{
+        color: black;
+      }
+      .zhong_13:visited{
+        color: black;
+      }
+      .zhong_13{
+        margin-left: 87px;
+        font-weight: 400;
+      }
+      .zhong_14{
+        margin: 0px 10px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        color: #b0b0b0;
+      }
+      .zhong_15{
+        margin: 0px 10px 10px;
+        text-align: center;
+        color: #ff6700;
+      }
+      .zhong_22>img{
+        width: 150px;
+        height: 150px;
+        margin: 20px 47px;
+      }
+      .zhong_23:link{
+        color: black;
+      }
+      .zhong_23:visited{
+        color: black;
+      }
+      .zhong_23{
+        margin-left: 40px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .zhong_24{
+        margin: 0px 10px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        color: #b0b0b0;
+      }
+      .zhong_25{
+        margin: 0px 10px 10px;
+        text-align: center;
+        color: #ff6700;
+      }
+
+      .zhong_32>img{
+        width: 150px;
+        height: 150px;
+        margin: 32px 47px;
+      }
+      .zhong_33:link{
+        color: black;
+      }
+      .zhong_33:visited{
+        color: black;
+      }
+      .zhong_33{
+        margin-left: 67px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .zhong_34{
+        margin: 0px 10px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        color: #b0b0b0;
+      }
+      .zhong_35{
+        margin: 0px 10px 10px;
+        text-align: center;
+        color: #ff6700;
+      }
+
+      .zhong_42>img{
+        width: 150px;
+        height: 150px;
+        margin: 32px 47px;
+      }
+      .zhong_43:link{
+        color: black;
+      }
+      .zhong_43:visited{
+        color: black;
+      }
+      .zhong_43{
+        margin-left: 72px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .zhong_44{
+        margin: 0px 10px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        color: #b0b0b0;
+      }
+      .zhong_45{
+        margin: 0px 10px 10px;
+        text-align: center;
+        color: #ff6700;
+      }
+
+      .zhong_52>img{
+        width: 150px;
+        height: 150px;
+        margin: 32px 47px;
+      }
+      .zhong_53:link{
+        color: black;
+      }
+      .zhong_53:visited{
+        color: black;
+      }
+      .zhong_53{
+        margin-left: 58px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .zhong_55{
+        margin: 0px 10px 10px;
+        text-align: center;
+        color: #ff6700;
+      }
+
+      .zhong_62>img{
+        width: 150px;
+        height: 150px;
+        margin: 42px 47px;
+      }
+      .zhong_63:link{
+        color: black;
+      }
+      .zhong_63:visited{
+        color: black;
+      }
+      .zhong_63{
+        margin-left: 77px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .zhong_65{
+        margin: 0px 10px 10px;
+        text-align: center;
+        color: #ff6700;
+      }
+
+      .zhong_72>img{
+        width: 150px;
+        height: 150px;
+        margin: 30px 47px;
+      }
+      .zhong_73:link{
+        color: black;
+      }
+      .zhong_73:visited{
+        color: black;
+      }
+      .zhong_73{
+        margin-left: 24px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .zhong_74{
+        margin: 0px 10px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        color: #b0b0b0;
+      }
+      .zhong_75{
+        margin: 0px 10px 10px;
+        text-align: center;
+        color: #ff6700;
+        font-size: 14px;
+      }
+
+      .zhong_80>img{
+        width: 80px;
+        height: 80px;
+        /*margin: 28px 130px;*/
+        position: relative;
+        top: 28px;
+        left: 130px;
+      }
+      .zhong_81{
+        position: relative;
+        top: -35px;
+        left: 29px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        color: #b0b0b0;
+      }
+      .zhong_82{
+        position: relative;
+        top: -28px;
+        left: -44px;
+        text-align: center;
+        color: #ff6700;
+      }
+      .zhong_91:link{
+        color: black;
+      }
+      .zhong_91:visited{
+        color: black;
+      }
+      .zhong_91{
+        position: relative;
+        top: 55px;
+        left: 29px;
+        font-size: 18px;
+      }
+      .zhong_92{
+        position: relative;
+        top: 60px;
+        left: -58px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        color: #b0b0b0;
+      }
+      .iconfont{
+        font-size: 65px;
+        line-height: 48px;
+        position: relative;
+        top: 10px;
+        left: 125px;
+        color: #ff6700;
+      }
+
+      .show>ul{
+        display: none;
+      }
+      .show>ul.active{
+        display: block;
+      }
+      .ping {
+        position: absolute;
+        bottom: -75px;
+        height: 75px;
+        left: 0;
+        /*z-index: 3;*/
+        width: 234px;
+        font-size: 12px;
+        background: #ff6700;
+        transition: all .2s linear;
+      }
+
+      .ping a {
+        display: block;
+        padding: 8px 30px;
+        outline: 0;
+      }
+
+      .ping_1 {
+        display: block;
+        margin-bottom: 5px;
+        color: #fff;
+      }
+
+      .ping_2 {
+        color: #fff;
+        color: rgba(255, 255, 255, 0.6);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="w">
+      <div class="head"><h2>周边</h2></div>
+
+      <div class="head_1">
+        <ul class="tabs">
+          <li class="active"><a href="#">热门</a></li>
+          <li><a href="#">服装</a></li>
+          <li><a href="#">米兔</a></li>
+          <li><a href="#">生活周边</a></li>
+          <li><a href="#">箱包</a></li>
+        </ul>
+      </div>
+
+
+      <div class="zhongzuo"><img src="./imgs/1.jpg"></div>
+      <div class="zhongzuo1"><img src="./imgs/2.jpg"></div>
+      <div class="show">
+        <ul class="active">
+          <li class="zhong_1">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_12"><img src="./imgs/4.jpg"></div>
+            <a class="zhong_13" href="https://www.mi.com/shouhuan2/" target="_blank">小米手环2</a>
+            <p class="zhong_14" >OLED显示屏幕，升级计步算法</OLEDXIA></p>
+            <p class="zhong_15">149元</p>
+            <div class="ping">
+              <a href="#">
+                <span class="ping_1">小米值得拥有,我们已离不开您!这是要搞基的节奏</span>
+                <span class="ping_2">来自于 火星 的评价</span>
+              </a>
+            </div>
+          </li>
+          <li class="zhong_2">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_22"><img src="./imgs/7.jpg"></div>
+            <a class="zhong_23" href="https://item.mi.com/1173500040.html" target="_blank">知吾煮保鲜盒715+1100ml</a>
+            <p class="zhong_25">109元</p>
+            <p class="zhong_24" >431人评价</p>
+          </li>
+          <li class="zhong_3">
+            <div class="zhong_32"><img src="./imgs/6.jpg"></div>
+            <a class="zhong_33" href="https://item.mi.com/1173000015.html" target="_blank">8H懒人舒适沙发</a>
+            <p class="zhong_35">649元</p>
+            <p class="zhong_34" >4031人评价</p>
+          </li>
+          <li class="zhong_4">
+            <div class="zhong_42"><img src="./imgs/5.jpg"></div>
+            <a class="zhong_43" href="https://www.mi.com/pillowZ2/" target="_blank">8H护颈乳胶枕</a>
+            <p class="zhong_45">249元</p>
+            <p class="zhong_44" >1031人评价</p>
+          </li>
+          <li class="zhong_5">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_52"><img src="./imgs/8.jpg"></div>
+            <a class="zhong_53" href="https://www.mi.com/hoodie/" target="_blank">经典百搭连衣帽卫衣</a>
+            <p class="zhong_55">149元</p>
+          </li>
+          <li class="zhong_6">
+            <div class="zhong_62"><img src="./imgs/9.jpg"></div>
+            <a class="zhong_63" href="https://www.mi.com/thermometer/" target="_blank">iHealth体温计</a>
+            <p class="zhong_65">149元</p>
+          </li>
+          <li class="zhong_7">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_72"><img src="./imgs/10.jpg"></div>
+            <a class="zhong_73" href="https://www.mi.com/shouhuan2/" target="_blank">小米移动电源10000mAh高配版</a>
+            <p class="zhong_74" >149元</p>
+            <p class="zhong_75">1.2万人评价</p>
+          </li>
+          <li class="zhong_8">
+            <div class="zhong_80"><img src="./imgs/3.jpg"></div>
+            <a class="zhong_81" href="#">90分旅行箱28寸</a>
+            <p class="zhong_82">499元</p>
+          </li>
+          <li class="zhong_9">
+            <a class="zhong_91" href="#">浏览更多</a>
+            <p class="zhong_92">热门</p>
+            <i class="iconfont icon-yq-jt-r"></i>
+          </li>
+        </ul>
+
+
+
+
+        <ul>
+          <li class="zhong_1">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_12"><img src="./imgs/ds1.jpg"></div>
+            <a class="zhong_13" href="https://www.mi.com/shouhuan2/" target="_blank">小米手环2</a>
+            <p class="zhong_14" >OLED显示屏幕，升级计步算法</OLEDXIA></p>
+            <p class="zhong_15">149元</p>
+          </li>
+          <li class="zhong_2">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_22"><img src="./imgs/ds2.png"></div>
+            <a class="zhong_23" href="https://item.mi.com/1173500040.html" target="_blank">知吾煮保鲜盒715+1100ml</a>
+            <p class="zhong_25">109元</p>
+            <p class="zhong_24" >431人评价</p>
+          </li>
+          <li class="zhong_3">
+            <div class="zhong_32"><img src="./imgs/ds3.png"></div>
+            <a class="zhong_33" href="https://item.mi.com/1173000015.html" target="_blank">8H懒人舒适沙发</a>
+            <p class="zhong_35">649元</p>
+            <p class="zhong_34" >4031人评价</p>
+          </li>
+          <li class="zhong_4">
+            <div class="zhong_42"><img src="./imgs/ds4.png"></div>
+            <a class="zhong_43" href="https://www.mi.com/pillowZ2/" target="_blank">8H护颈乳胶枕</a>
+            <p class="zhong_45">249元</p>
+            <p class="zhong_44" >1031人评价</p>
+          </li>
+          <li class="zhong_5">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_52"><img src="./imgs/ds5.jpg"></div>
+            <a class="zhong_53" href="https://www.mi.com/hoodie/" target="_blank">经典百搭连衣帽卫衣</a>
+            <p class="zhong_55">149元</p>
+          </li>
+          <li class="zhong_6">
+            <div class="zhong_62"><img src="./imgs/ds6.jpg"></div>
+            <a class="zhong_63" href="https://www.mi.com/thermometer/" target="_blank">iHealth体温计</a>
+            <p class="zhong_65">149元</p>
+          </li>
+          <li class="zhong_7">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_72"><img src="./imgs/ds7.jpg"></div>
+            <a class="zhong_73" href="https://www.mi.com/shouhuan2/" target="_blank">小米移动电源10000mAh高配版</a>
+            <p class="zhong_74" >149元</p>
+            <p class="zhong_75">1.2万人评价</p>
+          </li>
+          <li class="zhong_8">
+            <div class="zhong_80"><img src="./imgs/ds8.jpg"></div>
+            <a class="zhong_81" href="#">90分旅行箱28寸</a>
+            <p class="zhong_82">499元</p>
+          </li>
+          <li class="zhong_9">
+            <a class="zhong_91" href="#">浏览更多</a>
+            <p class="zhong_92">热门</p>
+            <i class="iconfont icon-yq-jt-r"></i>
+          </li>
+        </ul>
+
+
+        <ul>
+          <li class="zhong_1">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_12"><img src="./imgs/4.jpg"></div>
+            <a class="zhong_13" href="https://www.mi.com/shouhuan2/" target="_blank">小米手环2</a>
+            <p class="zhong_14" >OLED显示屏幕，升级计步算法</OLEDXIA></p>
+            <p class="zhong_15">149元</p>
+          </li>
+          <li class="zhong_2">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_22"><img src="./imgs/7.jpg"></div>
+            <a class="zhong_23" href="https://item.mi.com/1173500040.html" target="_blank">知吾煮保鲜盒715+1100ml</a>
+            <p class="zhong_25">109元</p>
+            <p class="zhong_24" >431人评价</p>
+          </li>
+          <li class="zhong_3">
+            <div class="zhong_32"><img src="./imgs/6.jpg"></div>
+            <a class="zhong_33" href="https://item.mi.com/1173000015.html" target="_blank">8H懒人舒适沙发</a>
+            <p class="zhong_35">649元</p>
+            <p class="zhong_34" >4031人评价</p>
+          </li>
+          <li class="zhong_4">
+            <div class="zhong_42"><img src="./imgs/5.jpg"></div>
+            <a class="zhong_43" href="https://www.mi.com/pillowZ2/" target="_blank">8H护颈乳胶枕</a>
+            <p class="zhong_45">249元</p>
+            <p class="zhong_44" >1031人评价</p>
+          </li>
+          <li class="zhong_5">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_52"><img src="./imgs/8.jpg"></div>
+            <a class="zhong_53" href="https://www.mi.com/hoodie/" target="_blank">经典百搭连衣帽卫衣</a>
+            <p class="zhong_55">149元</p>
+          </li>
+          <li class="zhong_6">
+            <div class="zhong_62"><img src="./imgs/9.jpg"></div>
+            <a class="zhong_63" href="https://www.mi.com/thermometer/" target="_blank">iHealth体温计</a>
+            <p class="zhong_65">149元</p>
+          </li>
+          <li class="zhong_7">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_72"><img src="./imgs/10.jpg"></div>
+            <a class="zhong_73" href="https://www.mi.com/shouhuan2/" target="_blank">小米移动电源10000mAh高配版</a>
+            <p class="zhong_74" >149元</p>
+            <p class="zhong_75">1.2万人评价</p>
+          </li>
+          <li class="zhong_8">
+            <div class="zhong_80"><img src="./imgs/3.jpg"></div>
+            <a class="zhong_81" href="#">90分旅行箱28寸</a>
+            <p class="zhong_82">499元</p>
+          </li>
+          <li class="zhong_9">
+            <a class="zhong_91" href="#">浏览更多</a>
+            <p class="zhong_92">热门</p>
+            <i class="iconfont icon-yq-jt-r"></i>
+          </li>
+        </ul>
+
+
+        <ul>
+          <li class="zhong_1">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_12"><img src="./imgs/4.jpg"></div>
+            <a class="zhong_13" href="https://www.mi.com/shouhuan2/" target="_blank">小米手环2</a>
+            <p class="zhong_14" >OLED显示屏幕，升级计步算法</OLEDXIA></p>
+            <p class="zhong_15">149元</p>
+          </li>
+          <li class="zhong_2">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_22"><img src="./imgs/7.jpg"></div>
+            <a class="zhong_23" href="https://item.mi.com/1173500040.html" target="_blank">知吾煮保鲜盒715+1100ml</a>
+            <p class="zhong_25">109元</p>
+            <p class="zhong_24" >431人评价</p>
+          </li>
+          <li class="zhong_3">
+            <div class="zhong_32"><img src="./imgs/6.jpg"></div>
+            <a class="zhong_33" href="https://item.mi.com/1173000015.html" target="_blank">8H懒人舒适沙发</a>
+            <p class="zhong_35">649元</p>
+            <p class="zhong_34" >4031人评价</p>
+          </li>
+          <li class="zhong_4">
+            <div class="zhong_42"><img src="./imgs/5.jpg"></div>
+            <a class="zhong_43" href="https://www.mi.com/pillowZ2/" target="_blank">8H护颈乳胶枕</a>
+            <p class="zhong_45">249元</p>
+            <p class="zhong_44" >1031人评价</p>
+          </li>
+          <li class="zhong_5">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_52"><img src="./imgs/kong1.jpg"></div>
+            <a class="zhong_53" href="https://www.mi.com/hoodie/" target="_blank">经典百搭连衣帽卫衣</a>
+            <p class="zhong_55">149元</p>
+          </li>
+          <li class="zhong_6">
+            <div class="zhong_62"><img src="./imgs/9.jpg"></div>
+            <a class="zhong_63" href="https://www.mi.com/thermometer/" target="_blank">iHealth体温计</a>
+            <p class="zhong_65">149元</p>
+          </li>
+          <li class="zhong_7">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_72"><img src="./imgs/lou1.jpg"></div>
+            <a class="zhong_73" href="https://www.mi.com/shouhuan2/" target="_blank">小米移动电源10000mAh高配版</a>
+            <p class="zhong_74" >149元</p>
+            <p class="zhong_75">1.2万人评价</p>
+          </li>
+          <li class="zhong_8">
+            <div class="zhong_80"><img src="./imgs/3.jpg"></div>
+            <a class="zhong_81" href="#">90分旅行箱28寸</a>
+            <p class="zhong_82">499元</p>
+          </li>
+          <li class="zhong_9">
+            <a class="zhong_91" href="#">浏览更多</a>
+            <p class="zhong_92">热门</p>
+            <i class="iconfont icon-yq-jt-r"></i>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="zhong_1">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_12"><img src="./imgs/4.jpg"></div>
+            <a class="zhong_13" href="https://www.mi.com/shouhuan2/" target="_blank">小米手环2</a>
+            <p class="zhong_14" >OLED显示屏幕，升级计步算法</OLEDXIA></p>
+            <p class="zhong_15">149元</p>
+          </li>
+          <li class="zhong_2">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_22"><img src="./imgs/7.jpg"></div>
+            <a class="zhong_23" href="https://item.mi.com/1173500040.html" target="_blank">知吾煮保鲜盒715+1100ml</a>
+            <p class="zhong_25">109元</p>
+            <p class="zhong_24" >431人评价</p>
+          </li>
+          <li class="zhong_3">
+            <div class="zhong_32"><img src="./imgs/6.jpg"></div>
+            <a class="zhong_33" href="https://item.mi.com/1173000015.html" target="_blank">8H懒人舒适沙发</a>
+            <p class="zhong_35">649元</p>
+            <p class="zhong_34" >4031人评价</p>
+          </li>
+          <li class="zhong_4">
+            <div class="zhong_42"><img src="./imgs/5.jpg"></div>
+            <a class="zhong_43" href="https://www.mi.com/pillowZ2/" target="_blank">8H护颈乳胶枕</a>
+            <p class="zhong_45">249元</p>
+            <p class="zhong_44" >1031人评价</p>
+          </li>
+          <li class="zhong_5">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_52"><img src="./imgs/midian2.jpg"></div>
+            <a class="zhong_53" href="https://www.mi.com/hoodie/" target="_blank">经典百搭连衣帽卫衣</a>
+            <p class="zhong_55">149元</p>
+          </li>
+          <li class="zhong_6">
+            <div class="zhong_62"><img src="./imgs/mishe1.jpg"></div>
+            <a class="zhong_63" href="https://www.mi.com/thermometer/" target="_blank">iHealth体温计</a>
+            <p class="zhong_65">149元</p>
+          </li>
+          <li class="zhong_7">
+            <div class="zhong_11">新品</div>
+            <div class="zhong_72"><img src="./imgs/mishi1.jpg"></div>
+            <a class="zhong_73" href="https://www.mi.com/shouhuan2/" target="_blank">小米移动电源10000mAh高配版</a>
+            <p class="zhong_74" >149元</p>
+            <p class="zhong_75">1.2万人评价</p>
+          </li>
+          <li class="zhong_8">
+            <div class="zhong_80"><img src="./imgs/shui1.jpg"></div>
+            <a class="zhong_81" href="#">90分旅行箱28寸</a>
+            <p class="zhong_82">499元</p>
+          </li>
+          <li class="zhong_9">
+            <a class="zhong_91" href="#">浏览更多</a>
+            <p class="zhong_92">热门</p>
+            <i class="iconfont icon-yq-jt-r"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+
+      var tabs = document.getElementsByClassName('tabs')[0].children;
+      var contents = document.getElementsByClassName("show")[0].children;
+      // console.log(contents[0]);
+      for (var i = 0; i < tabs.length; i++) {
+        (function(i) {
+          tabs[i].onmouseover = function(event) {
+
+            for (var j = 0; j < tabs.length; j++) {
+              tabs[j].className = "";
+              // console.log(contents[j]);
+              contents[j].className = "";
+            }
+
+            this.className = "active";
+            contents[i].className = "active";
+            // console.log("对应的内容索引 : ",i);
+          };
+        })(i);
+      }
+    </script>
+  </body>
+</html>

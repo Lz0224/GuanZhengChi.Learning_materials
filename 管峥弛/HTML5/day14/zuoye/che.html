@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>可怕的女司机</title>
+    <style media="screen">
+    img{
+        width: 300px;
+        height: 100px;
+        margin: 100px 0px;
+        animation-name: che;
+        animation-timing-function: linear;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+
+    @keyframes che{
+      10%{
+        transform: skew(40deg) translate(200px);
+        transform-origin: left;
+      }
+
+      25%{
+        transform: rotate(0deg) translate(250px);
+      }
+
+      70%{
+        transform: skew(-40deg) translateX(800px);
+      }
+
+      100%{
+       transform: skew(-10deg) translate(1000px);
+       transform-origin: right;
+      }
+    }
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <span><img src="../image/car.jpg"></span>
+  </body>
+</html>

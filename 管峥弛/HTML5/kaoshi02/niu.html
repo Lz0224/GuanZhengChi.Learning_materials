@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>七牛云</title>
+
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js" charset="utf-8"></script>
+
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      nav.navbar {
+        min-height: 68px;
+        margin-bottom: 0;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1000;
+        width: 100%;
+        background-color: transparent;
+      }
+
+      nav.navbar:hover {
+      background-color: #303848;
+      }
+
+    .navbar-default .navbar-nav>li>a:hover {
+      color: #00A0DE;
+    }
+
+    .btn-hollow:hover, .btn-hollow:focus {
+      color: #006992;
+      background-color: #FFF;
+      border-color: #FFF;
+    }
+
+    .actions >a{
+      margin-top: 8px;
+    }
+
+      #carousel-example-generic{
+        margin-top: -80px;
+      }
+
+      .ha{
+        height: 650px;
+      }
+
+      .ha_1{
+        float: none;
+        width: 100%;
+        height: 650px;
+        position: relative;
+      }
+
+      .tu_1{
+        width: 469px;
+        height: 339px;
+        z-index: 1000;
+        position: absolute;
+        top: 190px;
+        left: 960px;
+      }
+
+      .navbar-center{
+        position: absolute;
+        top: 180px;
+        right: 245px;
+        z-index: 1000;
+        background-color: transparent;
+      }
+
+      .zi_1{
+        color: white;
+        margin-bottom: 24px;
+      }
+
+      .navbar-center_1{
+        position: absolute;
+        top: 180px;
+        left: 340px;
+        z-index: 1000;
+        background-color: transparent;
+      }
+
+      .navbar{
+        z-index:2;
+        opacity: 0.8;
+        border: 0px;
+        background: none;
+      }
+
+      .media-object{
+        width: 140px;
+        height: 140px;
+      }
+
+      .title{
+        text-align: center;
+      }
+
+      .desc{
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- <div class="head">
+      <div class="head_1"><img src="./img/1.png"></div>
+    </div> -->
+
+    <nav class="navbar navbar-default" id="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a class="navbar-brand" href="https://www.qiniu.com/"><img width="100" src="./img/1.png" alt="Logo white"></a>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-collapse" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav navbar-nav-mobile">
+            <li class="dropdown" id="spaces-dropdown">
+              <a href="https://www.qiniu.com/?hmsr=biaoti&amp;hmpl=pinzhuan&amp;hmcu=biaoti&amp;hmkw=&amp;hmci=#" class="dropdown-toggle dropdown-toggle-mobile" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品</a>
+
+              <ul class="dropdown-menu services-menu">
+                  <li class="menu-title hidden-xs">基础服务</li>
+                    <li class="service"><a href="https://www.qiniu.com/products/kodo"><h4 class="kodo">对象存储</h4><p class="hidden-xs">高可用、易扩展、低成本、一站式</p></a></li>                    <li class="service"><a href="https://www.qiniu.com/products/fusion"><h4 class="fusion">融合 CDN</h4><p class="hidden-xs">融合优质节点、可监控、智能调度的内容分发服务</p></a></li>                    <li class="service"><a href="https://www.qiniu.com/products/kirk"><h4 class="kirk">容器云 <small>(即将上线)</small></h4><p class="hidden-xs">面向微服务架构的企业级容器管理平台</p></a></li>                  <li class="menu-title hidden-xs">数据•智能</li>
+                    <li class="service"><a href="https://www.qiniu.com/products/atlab"><h4 class="atlab">深度学习平台</h4><p class="hidden-xs">针对图片视频的一站式数据集中处理、模型训练平台</p></a></li>                    <li class="service"><a href="https://www.qiniu.com/products/pandora"><h4 class="pandora">大数据</h4><p class="hidden-xs">简单、高效、开放</p></a></li>                    <li class="service"><a href="https://www.qiniu.com/products/dora"><h4 class="dora">智能多媒体 API</h4><p class="hidden-xs">针对海量图片视频提供鉴黄鉴暴、人脸技术、物体识别等服务</p></a></li>                  <li class="menu-title hidden-xs">视频服务</li>
+                    <li class="service"><a href="https://www.qiniu.com/products/pili"><h4 class="pili">直播云</h4><p class="hidden-xs">提供全球化实时流服务和端到端直播场景解决方案</p></a></li>                    <li class="service"><a href="https://www.qiniu.com/products/vance"><h4 class="vance">点播云</h4><p class="hidden-xs">提供上传、存储、转码分发、播放器等服务的一站式点播服务</p></a></li>              </ul>
+            </li>
+
+            <li class="dropdown" id="solution-dropdown">
+              <a href="https://www.qiniu.com/?hmsr=biaoti&amp;hmpl=pinzhuan&amp;hmcu=biaoti&amp;hmkw=&amp;hmci=#" class="dropdown-toggle dropdown-toggle-mobile" id="solution-dropdown-title" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">解决方案</a>
+
+              <ul class="dropdown-menu solutions-menu">
+                  <li class="solution"><a href="https://www.qiniu.com/solutions#QOS"><h4 class="QOS menu-title">私有云存储解决方案</h4><p class="hidden-xs">可定制化的数百 PB 级别、高可靠、强安全的存储系统</p></a></li>                  <li class="solution"><a href="https://www.qiniu.com/solutions#UDMP"><h4 class="UDMP menu-title">非结构化数据管理解决方案</h4><p class="hidden-xs">提供大批量文件打包上传、文档检索、多媒体数据处理等服务</p></a></li>                  <li class="solution"><a href="https://www.qiniu.com/solutions#PLSV"><h4 class="PLSV menu-title">短视频解决方案</h4><p class="hidden-xs">集成完整云端能力及卓越采集端、播放端功能的一站式短视频解决方案</p></a></li>                  <li class="solution"><a href="https://www.qiniu.com/solutions#ICA"><h4 class="ICA menu-title">智能云相册解决方案</h4><p class="hidden-xs">满足各场景照片智能分类需求，提供与手机ROM深度定制服务</p></a></li>                  <li class="solution"><a href="https://www.qiniu.com/solutions#IHAIOT"><h4 class="IHAIOT menu-title">智能硬件与物联网解决方案</h4><p class="hidden-xs">满足智能硬件厂商各应用场景下云端计算需求</p></a></li>                  <li class="solution"><a href="https://www.qiniu.com/solutions#RTMI"><h4 class="RTMI menu-title">广电传媒解决方案</h4><p class="hidden-xs">满足传统媒体向融合媒体转型需求，构建全媒体资源管理系统</p></a></li>                  <li class="solution"><a href="https://www.qiniu.com/solutions#HST"><h4 class="HST menu-title">安防解决方案</h4><p class="hidden-xs">灵活部署，满足不同安防场景互联网远程监控需求</p></a></li>                  <li class="solution"><a href="https://www.qiniu.com/solutions#Internet"><h4 class="Internet menu-title">互联网与移动互联网解决方案</h4><p class="hidden-xs">为互联网初创企业量身定制，一站式云计算服务平台</p></a></li>                  <li class="solution"><a href="https://www.qiniu.com/solutions#DQM"><h4 class="DQM menu-title">应用质量监控解决方案</h4><p class="hidden-xs">满足移动及视频应用性能管理需求，可定制化的质量监控平台</p></a></li>              </ul>
+            </li>
+            <li><a href="https://www.qiniu.com/prices">价格</a></li>
+            <li><a href="https://www.qiniu.com/company">关于我们</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-nav-mobile">
+            <li><a target="_blank" href="https://portal.qiniu.com/">管理控制台</a></li>
+            <li><a target="_blank" href="https://developer.qiniu.com/">开发者中心</a></li>
+            <li><a href="https://www.qiniu.com/events">热门活动</a></li>
+            <li>
+              <div class="actions">
+                <a target="_blank" href="https://portal.qiniu.com/signin" class="btn btn-hollow">登录</a>
+                <a target="_blank" href="https://portal.qiniu.com/signup" class="btn btn-primary">注册有礼</a>
+              </div>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="ha">
+          <img class="ha_1" src="./img/2.jpg" alt="...">
+          </div>
+          <!-- <img src="./img/2.jpg" alt="..."> -->
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="ha">
+          <div class="navbar-center jumbotron text-center">
+            <h2 class="zi_1">七牛云推出</h2>
+            <p class="zi_1">私有云存储解决方案</p>
+            <p class="zi_1">能够针对企业客户场景进行灵活地部署和运维</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">点击咨询</a></p>
+          </div>
+          <img class="ha_1" src="./img/4.jpg" alt="...">
+          </div>
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="ha">
+            <div class="navbar-center_1 jumbotron text-center">
+              <h2 class="zi_1">七牛云推出</h2>
+              <p class="zi_1">私有云存储解决方案</p>
+              <p><a class="btn btn-primary btn-lg" href="#" role="button">查询详情</a></p>
+            </div>
+          <div class="tu"><img class="tu_1" src="./img/6.png"></div>
+          <img class="ha_1" src="./img/5.jpg" alt="...">
+          </div>
+          <div class="carousel-caption">
+            ...
+          </div>
+        </div>
+        ...
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+
+
+
+    <div class="features">
+      <div class="container">
+        <div class="intro">
+          <h2 class="title">持续挖掘海量数据的无限价值</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" alt="海量存储" src="./img/icon-massstorage@2x-e76217a8daa1c84427de719c29b0d50aa693c380e32b085e73421715be9ab4e7.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">海量存储</h4>
+                <p>所有数据都有有效期，面对不断膨胀的数据领域，数据如何管理？七牛云完全自主知识产权的对象存储，已经过最严酷的考验，为 EB 规模的数据存储做好充分准备。</p>
+                <p>
+                  <a class="icon icon-storage" href="https://www.qiniu.com/products/kodo">对象存储</a>              <a class="icon icon-databass" href="https://www.qiniu.com/products/pandora">时序数据库</a>            </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" alt="数据洞察" src="./img/icon-num@2x-1ce865341f8a2e0d2e31de027adc0fa680858e1bb889749b15533edc4340152d.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">数据洞察</h4>
+                <p>让数据从负担变成资产的关键步骤是数据的价值挖掘。七牛云提供的大数据产品集和机器学习产品集可以帮助您以最佳的方式理解自己的资产。</p>
+                <p>
+                  <a class="icon icon-machine-learning" href="https://www.qiniu.com/products/atlab">深度学习平台</a>              <a class="icon icon-xspark" href="https://www.qiniu.com/products/pandora">Spark 服务</a>              <a class="icon icon-bigdata" href="https://www.qiniu.com/products/pandora">大数据平台</a>            </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" alt="加速传输" src="./img/icon-accelerate@2x-b363f024eb5a2d263d0909eab8ad231e735bd17e1da14cfd8fa6ff7f820973cb.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">加速传输</h4>
+                <p>七牛云独家的融合 CDN 结合了主流 CDN 和自建 CDN 节点的优势，让您能够在性能和成本之间得到一个最佳的平衡。</p>
+                <p>
+                  <a class="icon icon-dora" href="https://www.qiniu.com/products/fusion">融合 CDN</a>            </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" alt="高性能计算" src="./img/icon-controllale@2x-47c22ae3192d5b1a26f8ccb4852d67ea8a1d10d5ab357bda51959edabdab1237.png">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">高性能计算</h4>
+                <p>为了能让数据流转，我们需要对数据进行高速处理。七牛云构建了基于容器的计算平台，并基于容器平台构建了功能丰富且开放性的智能媒体云平台。您只需考虑怎么处理数据，而无需考虑数据的规模和系统性能。</p>
+                <p>
+                  <a class="icon icon-media" href="https://www.qiniu.com/products/dora">智能多媒体 API</a>              <a class="icon icon-container" href="https://www.qiniu.com/products/kirk">容器云</a>            </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="features features-solution">
+      <div class="container">
+        <div class="intro">
+          <h2 class="title">一站式视频点播和直播解决方案</h2>
+          <p class="desc">集成存储与融合 CDN，汇聚七牛强大的数据处理能力，提供直播、录制、转码、发布、加速、播放等一站式视频直播、点播服务。</p>
+          <p class="desc">
+            <a class="icon icon-streaming" href="https://www.qiniu.com/products/vance">点播云</a>        <a class="icon icon-video" href="https://www.qiniu.com/products/pili">直播云</a>      </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+              <img class="media-object media-object-index" width="120" alt="流畅" src="./img/icon-fast@2x-3c12bbd3a0cc5ae6117096bf13ad59033a855204368a01d534d136ddff1516a2.png">
+              <div class="caption caption-index">
+                <h4 class="caption-title">流畅</h4>
+                <p>视频方案的基础在于播放的流畅性。七牛云从推流端到播放端每一个环节都进行了极致的流畅性优化。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+              <img class="media-object media-object-index" width="120" alt="高效" src="./img/icon-productivity@2x-5a2deeabf3c0cc2cdf420baa8d65f08848520129cf458d58c8881611a197e95f.png">
+              <div class="caption caption-index">
+                <h4 class="caption-title">高效</h4>
+                <p>提供端到端的完整方案，让原有需要超过六个月的产品开发工作简化到一个月内就可完成上线。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+              <img class="media-object media-object-index" width="120" alt="低成本" src="./img/icon-lowcost@2x-0dc1cb50b8ddb197e04c1671441356926a4c0ade280340d6e14d9aa344ba56db.png">
+              <div class="caption caption-index">
+                <h4 class="caption-title">低成本</h4>
+                <p>我们采用了各种可靠的技术方式，包括内容压缩、P2P 传输、H.265 编码、自适应码流等手段来降低成本。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+              <img class="media-object media-object-index" width="120" alt="可控" src="./img/icon-controllable@2x-f7904bd8c98a57847a23fed95df40f88f35dbb400a60f4a2dbe7d4e371518fe8.png">
+              <div class="caption caption-index">
+                <h4 class="caption-title">可控</h4>
+                <p>充分发挥大数据和机器学习的优势，以最实时的方式监测服务质量，并能以开放的方式进行深度的业务分析。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $('.carousel').carousel({
+        interval: 3000
+      })
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,78 @@
+body > div {
+  width: 500px;
+  height: 500px;
+  margin: 200px auto;
+  border: 1px solid rgb(121, 124, 120);
+  border-radius: 5px;
+}
+
+.page-header {
+  color: rgb(0, 191, 31);
+  margin: 0 0 10px 30px;
+}
+
+.content {
+  height: 76px;
+  position: relative;
+  border-bottom: 1px solid rgb(171, 171, 171);
+
+  .img-jing {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: rgb(212, 180, 227);
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    left: 40px;
+    background: url('./xingzuo/Icon.png') no-repeat;
+    background-position:  0px -5px;
+  }
+
+  .select {
+    margin-left: 130px;
+    margin-bottom: 10px;
+    width: 120px;
+    height: 25px;
+    font-size: 18px;
+    text-align: center;
+    text-indent: 15px;
+  }
+
+  .luck {
+    margin-left: 130px;
+    font-size: 20px;
+    height: 30px;
+
+    i {
+      display: inline-block;
+      height: 15px;
+      width: 80px;
+      // overflow: hidden;
+    }
+    i.one {
+      position: relative;
+      background: url('./xingzuo/yunshi.png') no-repeat;
+      // background: url('./xingzuo/yunshi.png') no-repeat 0 27px;
+    }
+    i.tow {
+      width: 70%;
+      position: absolute;
+      background: url('./xingzuo/yunshi.png') no-repeat 0px -26px;
+      top: -1px;
+    }
+  }
+}
+
+
+ul {
+  list-style: none;
+  text-indent: 2em;
+  li {
+    display: none;
+  }
+
+  li:first-child {
+    display: block;
+  }
+}

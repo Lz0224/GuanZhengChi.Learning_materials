@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>钟表</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .clock{
+        width: 600px;
+        height: 600px;
+        background-image: url("./clock/clock.jpg");
+        position: relative;
+        top: 100px;
+        left: 600px;
+      }
+
+      .clock>div{
+        width: 30px;
+        height: 600px;
+        transform-origin: center;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 0px;
+        left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="clock">
+      <div class="hour"><img src="./clock/hour.png"></div>
+      <div class="minute"><img src="./clock/minute.png"></div>
+      <div class="second"><img src="./clock/second.png"></div>
+    </div>
+
+    <script type="text/javascript">
+
+      var hour = document.getElementsByClassName("hour")[0];
+      var minute = document.getElementsByClassName("minute")[0];
+      var second = document.getElementsByClassName("second")[0];
+
+      function zhongBiao(){
+        var time = new Date();
+        hours = time.getHours() % 12 * 30 + time.getMinutes() / 2;
+        minutes = time.getMinutes() * 6;
+        seconds = time.getSeconds() * 6;
+
+        hour.style.cssText = ("transform: translateX(-50%) rotate("+ hours + "deg);");
+        minute.style.cssText = ("transform: translateX(-50%) rotateZ(" + minutes + "deg);");
+        second.style.cssText = ("transform: translateX(-50%) rotateZ("+ seconds + "deg);");
+        setTimeout(zhongBiao,1000);
+
+      }
+
+      zhongBiao();
+    </script>
+  </body>
+</html>

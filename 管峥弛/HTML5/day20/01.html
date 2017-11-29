@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+    <script type="text/javascript">
+      // find查找符合条件的元素，有一个符合的就输出后面的不在执行
+      var b = [3,1,2,3,4,5,9,6];
+      var a = b.find(function(curr,index,arr){
+        return  curr < 6;
+      });
+      console.log(a);
+      // filter返回一个新的符合条件的数组
+      var a = b.filter(function(curr,index,arr){
+        return  curr < 6;
+      });
+      console.log(a);
+
+
+    </script>
+  </body>
+</html>

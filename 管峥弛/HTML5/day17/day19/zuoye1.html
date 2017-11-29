@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>100以内质数</title>
+  </head>
+  <body>
+    <!-- 质数释义：
+          素数，除本身的绝对值外，不可能为大于1的整数除尽的数
+     -->
+    <script type="text/javascript">
+
+
+
+      zhishu();
+        function zhishu(){
+          var str="",n=0;
+          for(var i=1; i<=100; i++){
+              var m=0; //质数
+              for(var j=2; j<i; j++){
+                  if(i%j==0){
+                      m=1; //非质数
+                      break;
+                  }
+              }
+              if(m==0 && i!=2){
+                  str=str + i + "，";
+                  n++; //质数个数+1
+              }
+          }
+          // window.document.write("<p>1-100间的质数总数为：" + n + " 个</p>");
+          // window.document.write("<p>1-100间的质数分别为：" + str.substr(0,str.length-1) +"</p>");
+          console.log(str);
+
+        }
+
+
+    </script>
+  </body>
+</html>

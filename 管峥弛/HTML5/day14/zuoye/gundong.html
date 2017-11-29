@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>滚动起来</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .one{
+        width: 882px;
+        height: 86px;
+        border: 1px solid black;
+        overflow: hidden;
+        position: relative;
+        top: 100px;
+        left: 200px;
+      }
+
+      li{
+        float: left;
+        list-style: none;
+      }
+      .two{
+        width: 1764px;
+        float: left;
+        position: absolute;
+        left: 0;
+        animation: move 5s linear infinite;
+      }
+
+      @keyframes move{
+        100%{
+          transform: translateX(-882px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="one">
+      <div class="two">
+        <ul>
+          <li><img src="../image/1.jpg"></li>
+          <li><img src="../image/2.jpg"></li>
+          <li><img src="../image/3.jpg"></li>
+          <li><img src="../image/4.jpg"></li>
+          <li><img src="../image/5.jpg"></li>
+          <li><img src="../image/6.jpg"></li>
+          <li><img src="../image/7.jpg"></li>
+          <li><img src="../image/1.jpg"></li>
+          <li><img src="../image/2.jpg"></li>
+          <li><img src="../image/3.jpg"></li>
+          <li><img src="../image/4.jpg"></li>
+          <li><img src="../image/5.jpg"></li>
+          <li><img src="../image/6.jpg"></li>
+          <li><img src="../image/7.jpg"></li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
